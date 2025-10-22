@@ -222,7 +222,7 @@ const ProfilePage = () => {
 
       try {
         const { data } = await axios.get(
-          `http://localhost:3001/api/orders/user/${sessionId}`
+          `https://shopsy-jyse.onrender.com/api/orders/user/${sessionId}`
         );
 console.log(data);
 

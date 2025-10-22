@@ -11,7 +11,7 @@ const Hero = ({ handleOrderPopup }) => {
   const [items, setitems] = useState([])
      useEffect(() => {
     axios
-     .get("http://localhost:3001/api/products")
+     .get("https://shopsy-jyse.onrender.com/api/products")
       .then((result) => {
         // Filter only Electronics category
         const filteredItems = result.data.filter(

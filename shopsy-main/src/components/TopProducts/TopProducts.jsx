@@ -195,7 +195,7 @@ const TopProducts = ({ handleOrderPopup }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/categories")
+      .get("https://shopsy-jyse.onrender.com/api/categories")
       .then((result) => setCategory(result.data))
       .catch((err) => console.log(err));
   }, []);

@@ -570,7 +570,7 @@ const AdminLogin = () => {
     setLoading(true);
     setError("");
     try {
-      const { data } = await axios.post("http://localhost:3001/api/admin/login", formData);
+      const { data } = await axios.post("https://shopsy-jyse.onrender.com/api/admin/login", formData);
       // backend expected to return token + user object. Adjust if your backend shape differs:
       // E.g. data = { token: "...", user: {...} }
       const token = data.token || data?.accessToken || null;

@@ -326,7 +326,7 @@ const AdminRegister = () => {
     setLoading(true);
     setError("");
     try {
-      const { data } = await axios.post("http://localhost:3001/api/admin/register", formData);
+      const { data } = await axios.post("https://shopsy-jyse.onrender.com/api/admin/register", formData);
       console.log("Registered Admin:", data);
       alert("Registered Successfully!");
       navigate("/admin/login");

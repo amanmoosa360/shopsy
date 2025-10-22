@@ -266,7 +266,7 @@ const Categories = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/categories")
+      .get("https://shopsy-jyse.onrender.com/api/categories")
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err));
   }, []);

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-const API_BASE = "http://localhost:3001";
+const API_BASE = "https://shopsy-jyse.onrender.com";
 
 const OrderSuccess = () => {
   const { orderId } = useParams();
