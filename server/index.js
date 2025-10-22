@@ -156,8 +156,29 @@ import adminRoutes from "./routes/adminRoutes.js"; // ✅ ADD THIS
 dotenv.config();
 const app = express();
 
+
+// ✅ CORS Configuration
+const allowedOrigins = [
+  "https://shopsy-olive-nu.vercel.app", // your live Vercel URL
+  "http://localhost:5173"               // for local development
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true); // allow non-browser requests
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        console.warn(`❌ Blocked by CORS: ${origin}`);
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // Routes
